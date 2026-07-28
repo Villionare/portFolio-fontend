@@ -12,55 +12,55 @@ const ProfileDetails: React.FC = () => {
             <div className="flex-1 ">
 
                 {/* name */}
-                <div className="flex items-baseline">
+                <div className="font-pixel8-bold flex items-baseline">
 
                     <div className="flex items-center">
                         <span className="text-5xl mr-2">
                             ABHAY SINGH
                         </span>
 
-                        <MdVerified size={35} />
+                        <MdVerified size={45} color="#27a2e7" />
                     </div>
                 </div>
 
                 <div>
-                    <span className="text-pink-600 uppercase tracking-wide">
+                    <span className="font-pixel8-bold text-pink-600 uppercase tracking-wide">
                         Software engineer / Web developer
                     </span>
                 </div>
 
                 {/* username */}
                 <div>
-                    <span className="text-xl">
+                    <span className="font-pixel8-bold text-xl">
                         @duedull
                     </span>
                 </div>
 
                 {/* bio */}
-                <div className="flex gap-1 items bg-center justify-start">
-                    <PiSmileyXEyesFill size={20} color="" />
+                <div className="font-pixel-mono-bold text-lg flex gap-1 items bg-center justify-start mt-2">
+                    <PiSmileyXEyesFill size={30} color="" />
                     <span>
                         Living in fantacy suffering in reality
                     </span>
                 </div>
 
                 {/* location */}
-                <div className="flex gap-1 items bg-center justify-start">
-                    <FaLocationDot color="red" />
+                <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
+                    <FaLocationDot size={30} />
                     <span>Faridabad, Haryana - 121003</span>
                 </div>
 
                 {/* birthday */}
-                <div className="flex gap-1 items bg-center justify-start">
-                    <GiCupcake />
+                <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
+                    <GiCupcake size={30} />
                     <span>11 July 2004</span>
                 </div>
             </div>
 
             {/* section 2 message */}
-            <div className="flex-1 flex items-start justify-center rounded-2xl">
+            <div className="font-pixel-bold mt-6 flex-1 flex items-start justify-center rounded-2xl">
 
-                <div className=" bg-white p-1 rounded-2xl border-2 border-black drop-shadow-[0_7px_0px_rgba(0,0,0,0.35)]">
+                <div className=" bg-white p-1 rounded-2xl border-2 border-black shadow-[6px_6px_0px_#3d3d3d]">
 
                     <div className="w-[40vw] bg-[#0a0d16] border-2 border-black p-2 rounded-2xl">
 

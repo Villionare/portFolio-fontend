@@ -5,9 +5,9 @@ import { FaHeart } from 'react-icons/fa';
 
 const LowerBar: React.FC = () => {
     return (
-        <div className="flex justify-between mt-2 w-[90vw]">
+        <div className="font-pixel-sc-bold flex justify-between mt-10 mb-6 w-[90vw]">
 
-            <div className="flex items-center justify-center border-2 bg-[#fad869] border-amber-400 w-50 rounded-xl">
+            <div className="flex text-2xl items-center justify-center border-2 bg-[#fad869] border-amber-400 w-50 rounded-xl">
 
                 <div className="flex-1 flex flex-col items-center border-r border-amber-400">
                     <div className="flex items-center justify gap-1">
