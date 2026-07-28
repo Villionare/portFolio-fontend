@@ -7,12 +7,15 @@ import {
     FaBriefcase,
     FaGithub,
     FaEnvelope,
-    FaFileArrowDown
 } from "react-icons/fa6";
 
 import { LiaMedalSolid } from "react-icons/lia";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="flex items-center justify-around bg-[#e53646] p-2 h-20 border-2 border-black rounded-2xl shadow-[inset_0_-4px_0_0_#b71c2c] text-white">
 
@@ -22,65 +25,92 @@ const Header = () => {
             </div>
 
             {/* Home */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaHouse />
                 <span>HOME</span>
             </button>
 
             {/* About */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/about")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaUser />
                 <span>ABOUT</span>
             </button>
 
             {/* Skills */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/skills")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaLaptopCode />
                 <span>SKILLS</span>
             </button>
 
             {/* Projects */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/projects")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaFolderOpen />
                 <span>PROJECTS</span>
             </button>
 
             {/* Education */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/education")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaGraduationCap />
                 <span>EDUCATION</span>
             </button>
 
-            {/* Experience */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            {/* Experience / Goals */}
+            <button
+                onClick={() => navigate("/goals")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaBriefcase />
                 <span>EXPERIENCE</span>
             </button>
 
             {/* Certifications */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/certifications")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <LiaMedalSolid />
                 <span>CERTIFICATIONS</span>
             </button>
 
-            {/* GitHub */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            {/* GitHub / Achievements */}
+            <button
+                onClick={() => navigate("/achievements")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaGithub />
                 <span>GITHUB</span>
             </button>
 
             {/* Contact */}
-            <button className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer">
+            <button
+                onClick={() => navigate("/contact")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+            >
                 <FaEnvelope />
                 <span>CONTACT</span>
             </button>
 
-            {/* Resume */}
-            <button className="flex items-center gap-2 px-4 py-2 bg-yellow-400 border-2 border-black rounded-2xl shadow-[inset_0_-4px_0_0_#d79832] text-black hover:bg-yellow-300 cursor-pointer">
-                <FaFileArrowDown />
-                <span>RESUME</span>
+            <button
+                onClick={() => window.close()}
+                className="flex items-center gap-2 px-4 py-2 bg-gray-300 border border-gray-400 rounded-2xl shadow-[inset_0_-4px_0_0_#787a7f] text-black hover:bg-gray-400 cursor-pointer"
+            >
+                <span>Gray Mode</span>
             </button>
-
         </div>
     );
 };

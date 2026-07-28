@@ -1,5 +1,5 @@
 import React from 'react';
-import coverImage from "../assets/background.png";
+import coverImage from "../assets/backgrounds/background.png";
 import ProfileImage from '../components/ProfileImage';
 import Socials from '../components/Socials';
 import ProfileDetails from '../components/ProfileDetails';

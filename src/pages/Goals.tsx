@@ -2,7 +2,7 @@ import React from 'react';
 
 const Goals: React.FC = () => {
   return (
-    <div>content</div>
+    <div>Goals</div>
   );
 };
 
