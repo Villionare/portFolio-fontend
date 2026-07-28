@@ -1,16 +1,119 @@
 @import "tailwindcss";
 
+/* IBM VGA */
 @font-face {
     font-family: "IBM VGA";
     src: url("./assets/fonts/ibm_vga8.woff2") format("woff2");
 }
 
+/* Pixel Operator */
+@font-face {
+    font-family: "Pixel Operator";
+    src: url("./assets/fonts/PixelOperator.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Bold";
+    src: url("./assets/fonts/PixelOperator-Bold.ttf") format("truetype");
+}
+
+/* 8px */
+@font-face {
+    font-family: "Pixel Operator 8";
+    src: url("./assets/fonts/PixelOperator8.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator 8 Bold";
+    src: url("./assets/fonts/PixelOperator8-Bold.ttf") format("truetype");
+}
+
+/* Half Bold */
+@font-face {
+    font-family: "Pixel Operator HB";
+    src: url("./assets/fonts/PixelOperatorHB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator HB8";
+    src: url("./assets/fonts/PixelOperatorHB8.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator HBSC";
+    src: url("./assets/fonts/PixelOperatorHBSC.ttf") format("truetype");
+}
+
+/* Mono */
+@font-face {
+    font-family: "Pixel Operator Mono";
+    src: url("./assets/fonts/PixelOperatorMono.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono Bold";
+    src: url("./assets/fonts/PixelOperatorMono-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono 8";
+    src: url("./assets/fonts/PixelOperatorMono8.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono 8 Bold";
+    src: url("./assets/fonts/PixelOperatorMono8-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono HB";
+    src: url("./assets/fonts/PixelOperatorMonoHB.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator Mono HB8";
+    src: url("./assets/fonts/PixelOperatorMonoHB8.ttf") format("truetype");
+}
+
+/* Small Caps */
+@font-face {
+    font-family: "Pixel Operator SC";
+    src: url("./assets/fonts/PixelOperatorSC.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Pixel Operator SC Bold";
+    src: url("./assets/fonts/PixelOperatorSC-Bold.ttf") format("truetype");
+}
+
+/* Tailwind theme */
 @theme {
     --font-vga: "IBM VGA", monospace;
+
+    --font-pixel: "Pixel Operator", sans-serif;
+    --font-pixel-bold: "Pixel Operator Bold", sans-serif;
+
+    --font-pixel8: "Pixel Operator 8", sans-serif;
+    --font-pixel8-bold: "Pixel Operator 8 Bold", sans-serif;
+
+    --font-pixel-hb: "Pixel Operator HB", sans-serif;
+    --font-pixel-hb8: "Pixel Operator HB8", sans-serif;
+    --font-pixel-hbsc: "Pixel Operator HBSC", sans-serif;
+
+    --font-pixel-mono: "Pixel Operator Mono", monospace;
+    --font-pixel-mono-bold: "Pixel Operator Mono Bold", monospace;
+
+    --font-pixel-mono8: "Pixel Operator Mono 8", monospace;
+    --font-pixel-mono8-bold: "Pixel Operator Mono 8 Bold", monospace;
+
+    --font-pixel-mono-hb: "Pixel Operator Mono HB", monospace;
+    --font-pixel-mono-hb8: "Pixel Operator Mono HB8", monospace;
+
+    --font-pixel-sc: "Pixel Operator SC", sans-serif;
+    --font-pixel-sc-bold: "Pixel Operator SC Bold", sans-serif;
 }
 
 body {
-    font-family: var(--font-vga);
     padding: 5px;
     background-color: #0a0e16;
 }

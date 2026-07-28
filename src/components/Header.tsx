@@ -17,17 +17,17 @@ const Header = () => {
     const navigate = useNavigate();
 
     return (
-        <div className="flex items-center justify-around bg-[#e53646] p-2 h-20 border-2 border-black rounded-2xl shadow-[inset_0_-4px_0_0_#b71c2c] text-white">
+        <div className="font-pixel-hb flex items-center justify-around bg-[#e53646] p-2 h-20 border-2 border-black rounded-md shadow-[inset_0_-4px_0_0_#b71c2c] text-white">
 
             {/* Logo */}
-            <div className="flex gap-2 rounded-md px-4 py-2 cursor-pointer">
+            <div className="flex gap-2 rounded-md-md px-4 py-2 cursor-pointer">
                 <span className="text-2xl text-yellow-300">{"</>_"}</span>
             </div>
 
             {/* Home */}
             <button
                 onClick={() => navigate("/")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaHouse />
                 <span>HOME</span>
@@ -36,7 +36,7 @@ const Header = () => {
             {/* About */}
             <button
                 onClick={() => navigate("/about")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaUser />
                 <span>ABOUT</span>
@@ -45,7 +45,7 @@ const Header = () => {
             {/* Skills */}
             <button
                 onClick={() => navigate("/skills")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaLaptopCode />
                 <span>SKILLS</span>
@@ -54,7 +54,7 @@ const Header = () => {
             {/* Projects */}
             <button
                 onClick={() => navigate("/projects")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaFolderOpen />
                 <span>PROJECTS</span>
@@ -63,7 +63,7 @@ const Header = () => {
             {/* Education */}
             <button
                 onClick={() => navigate("/education")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaGraduationCap />
                 <span>EDUCATION</span>
@@ -72,7 +72,7 @@ const Header = () => {
             {/* Experience / Goals */}
             <button
                 onClick={() => navigate("/goals")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaBriefcase />
                 <span>EXPERIENCE</span>
@@ -81,7 +81,7 @@ const Header = () => {
             {/* Certifications */}
             <button
                 onClick={() => navigate("/certifications")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <LiaMedalSolid />
                 <span>CERTIFICATIONS</span>
@@ -90,7 +90,7 @@ const Header = () => {
             {/* GitHub / Achievements */}
             <button
                 onClick={() => navigate("/achievements")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaGithub />
                 <span>GITHUB</span>
@@ -99,7 +99,7 @@ const Header = () => {
             {/* Contact */}
             <button
                 onClick={() => navigate("/contact")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-2xl hover:bg-red-600 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaEnvelope />
                 <span>CONTACT</span>
@@ -107,7 +107,7 @@ const Header = () => {
 
             <button
                 onClick={() => window.close()}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-300 border border-gray-400 rounded-2xl shadow-[inset_0_-4px_0_0_#787a7f] text-black hover:bg-gray-400 cursor-pointer"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-300 border border-gray-400 rounded-md shadow-[inset_0_-4px_0_0_#787a7f] text-black hover:bg-gray-400 cursor-pointer"
             >
                 <span>Gray Mode</span>
             </button>
