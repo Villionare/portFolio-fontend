@@ -9,7 +9,7 @@ const DownloadResume: React.FC = () => {
             <a
                 href={resume}
                 download="Abhay_Singh_Resume.pdf"
-                className="my-4 flex items-center justify-center gap-2 p-2 my-2 bg-pink-400 border-2 border-black rounded-2xl text-2xl drop-shadow-[0_7px_0px_rgba(0,0,0,0.35)] cursor-pointer hover:bg-pink-500"
+                className="my-4 flex items-center justify-center gap-2 p-2 bg-pink-400 border-2 border-black rounded-2xl text-2xl drop-shadow-[0_7px_0px_rgba(0,0,0,0.35)] cursor-pointer hover:bg-pink-500"
             >
                 <IoMdCloudDownload size={40} />
                 <span>Download Resume</span>

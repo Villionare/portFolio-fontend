@@ -17,7 +17,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ width, height }) => {
       <img
         src={profileImg}
         onClick={() => setSelectedImage(profileImg)}
-        className={`${width} ${height} h-45 rounded-full border-4 border-red-600 object-cover drop-shadow-[0_7px_0px_rgba(0,0,0,0.35)] transition-transform duration-300`}
+        className={`${width} ${height} h-45 rounded-full border-4 border-red-600 object-cover shadow-[6px_6px_0px_#3d3d3d] transition-transform duration-300`}
         alt="profile"
       />
 
