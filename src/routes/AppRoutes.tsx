@@ -6,7 +6,6 @@ import Projects from "../pages/Projects";
 import Section from "../pages/Section";
 import Skills from "../pages/Skills";
 import About from "../pages/About";
-import Certifications from "../pages/Certifications";
 import Education from "../pages/Education";
 import Contact from "../pages/Contact";
 
@@ -19,7 +18,6 @@ const AppRoutes = () => {
                     <Route path="/projects" element={<Projects />} />
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/certifications" element={<Certifications />} />
                     <Route path="/education" element={<Education />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/goals" element={<Goals />} />

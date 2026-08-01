@@ -9,7 +9,6 @@ import {
     FaEnvelope,
 } from "react-icons/fa6";
 
-import { LiaMedalSolid } from "react-icons/lia";
 import { useNavigate } from "react-router-dom";
 
 const Header = () => {
@@ -76,15 +75,6 @@ const Header = () => {
             >
                 <FaBriefcase />
                 <span>EXPERIENCE</span>
-            </button>
-
-            {/* Certifications */}
-            <button
-                onClick={() => navigate("/certifications")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
-            >
-                <LiaMedalSolid />
-                <span>CERTIFICATIONS</span>
             </button>
 
             {/* GitHub / Achievements */}

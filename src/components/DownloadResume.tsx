@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoMdCloudDownload } from 'react-icons/io';
-import resume from "../../public/TechAbhay.pdf";
+import resume from "../assets/TechAbhay.pdf";
 
 const DownloadResume: React.FC = () => {
     return (
