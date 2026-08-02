@@ -4,7 +4,6 @@ import {
     FaLaptopCode,
     FaFolderOpen,
     FaGraduationCap,
-    FaBriefcase,
     FaGithub,
     FaEnvelope,
 } from "react-icons/fa6";
@@ -68,18 +67,9 @@ const Header = () => {
                 <span>EDUCATION</span>
             </button>
 
-            {/* Experience / Goals */}
-            <button
-                onClick={() => navigate("/goals")}
-                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
-            >
-                <FaBriefcase />
-                <span>EXPERIENCE</span>
-            </button>
-
             {/* GitHub / Achievements */}
             <button
-                onClick={() => navigate("/achievements")}
+                onClick={() => navigate("/github")}
                 className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
                 <FaGithub />

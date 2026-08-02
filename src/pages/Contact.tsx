@@ -136,7 +136,20 @@ const Contact: React.FC = () => {
                     </div>
 
                     {/* right section*/}
-                    <div className="font-pixel-mono-hb flex-1 flex flex-col gap-4 ">
+                    <div className="font-pixel-mono-hb flex-1 flex flex-col gap-6 ">
+
+                        <div className="font-pixel-bold flex items-center justify-center bg-white p-1 rounded-2xl border-2 border-black shadow-[6px_6px_0px_#3d3d3d]">
+
+                            <div className="w-full bg-[#0a0d16] border-2 border-black p-2 rounded-2xl">
+
+                                <ul className="space-y-1 text-xl text-gray-200">
+                                    <li className="before:content-['>'] before:text-green-500 before:font-bold before:mr-3">
+                                        Send me a message to give a suggestions about this portfolio or either just wanna connect just write something...
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
 
                         <fieldset className="flex items-center bg-amber-200 p-5 pb-5 border-2 border-black rounded-2xl shadow-[6px_6px_0px_#3d3d3d]">
 
@@ -203,19 +216,6 @@ const Contact: React.FC = () => {
                             </form>
                         </fieldset>
 
-
-                        <div className="font-pixel-bold flex items-center justify-center bg-white p-1 rounded-2xl border-2 border-black shadow-[6px_6px_0px_#3d3d3d]">
-
-                            <div className="w-full bg-[#0a0d16] border-2 border-black p-2 rounded-2xl">
-
-                                <ul className="space-y-1 text-xl text-gray-200">
-                                    <li className="before:content-['>'] before:text-green-500 before:font-bold before:mr-3">
-                                        Send me a message to give a suggestions about this portfolio or either just wanna connect just write something...
-                                    </li>
-                                </ul>
-
-                            </div>
-                        </div>
 
                     </div>
                 </div>
