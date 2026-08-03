@@ -1,22 +1,17 @@
-import React from 'react';
-
-const fun() async{
-
-    const { data } = await octokit.request(
-        "GET /users/{username}",
-        {
-            username: "torvalds",
-        }
-    );
-}
+import { Octokit } from 'octokit';
+import React, { useEffect, useState } from 'react';
+import type { GitHubUser } from '../types/githubApiData';
+import fetchProfile from '../services/getGithubUser';
 
 const Github: React.FC = () => {
 
 
-    console.log(data.name);
-    return (
-        <div>github</div>
-    );
+    const [userData, setUserData] = useState<GitHubUser | null>(null);
+
+    useEffect(() => {
+        setUserData(fetchProfile());
+    }, []);
+    return <div className="">github</div>
 };
 
 export default Github;

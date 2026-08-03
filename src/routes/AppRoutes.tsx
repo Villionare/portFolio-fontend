@@ -8,6 +8,7 @@ import Skills from "../pages/Skills";
 import About from "../pages/About";
 import Education from "../pages/Education";
 import Contact from "../pages/Contact";
+import Github from "../pages/Github";
 
 const AppRoutes = () => {
     return (
@@ -19,6 +20,7 @@ const AppRoutes = () => {
                     <Route path="/skills" element={<Skills />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/education" element={<Education />} />
+                    <Route path="/github" element={<Github />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/goals" element={<Goals />} />
                     <Route path="/achievements" element={<Achievements />} />
