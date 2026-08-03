@@ -16,7 +16,7 @@ const Skills: React.FC = () => {
 
             {/* transparent box for cover */}
             <div className="relative h-40">
-                <div className="absolute -bottom-16 left-6">
+                <div className="absolute -bottom-25 left-6">
                     <ProfileImage height="h-45" width="w-45" />
                 </div>
 

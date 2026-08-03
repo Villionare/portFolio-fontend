@@ -29,7 +29,7 @@ const Education: React.FC = () => {
                     <span className="font-pixel-mono-bold text-2xl">The Journery till Now</span>
                 </div>
 
-                <div className="absolute -bottom-16 left-6">
+                <div className="absolute -bottom-25 left-6">
                     <ProfileImage height="h-45" width="w-45" />
                 </div>
 

@@ -28,7 +28,7 @@ const Contact: React.FC = () => {
                     <span className="font-pixel-mono-bold text-2xl">Let's Connect and have some briefs about this crazy coding world.</span>
                 </div>
 
-                <div className="absolute -bottom-16 left-6">
+                <div className="absolute -bottom-25 left-6">
                     <ProfileImage height="h-45" width="w-45" />
                 </div>
 
