@@ -1,15 +1,12 @@
-export interface GithubUser {
-  login: string;
-  id: number | bigint;
-  avatar_url: string;
-  html_url: string;
-  name: string | null;
-  bio: string | null;
-  company: string | null;
-  location: string | null;
-  blog: string | null;
-  public_repos: number;
-  followers: number;
-  following: number;
-  created_at: string;
+import { Octokit } from "octokit";
+
+export const octokit = new Octokit({
+  auth: import.meta.env.GITHUB_ACC_TOCKEN,
+});
+
+export interface GithubProfileData {
+  user: Awaited<ReturnType<typeof octokit.request<"GET /users/{username}">>>["data"];
+  repos: Awaited<ReturnType<typeof octokit.request<"GET /users/{username}/repos">>>["data"];
+  events: Awaited<ReturnType<typeof octokit.request<"GET /users/{username}/events/public">>>["data"];
+  commits: Awaited<ReturnType<typeof octokit.request<"GET /repos/{owner}/{repo}/commits">>>["data"];
 }

@@ -1,10 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
 import fetchGithubUser from "../api/github/fetchUserProfile";
 
-const useGitHubUserTanstack = (username: string) => {
+const useGitHubUserTanstack = (username: string, repo: string) => {
     return useQuery({
-        queryKey: ["accessUserTanstack", username],
-        queryFn: () => fetchGithubUser(username),
+        queryKey: ["accessUserTanstack", username, repo],
+        queryFn: () => fetchGithubUser(username, repo),
         staleTime: 1000 * 60 * 5,
     });
 }
