@@ -29,32 +29,36 @@ const ProfileDetails: React.FC = () => {
                     </span>
                 </div>
 
-                {/* username */}
-                <div>
-                    <span className="font-pixel8-bold text-xl">
-                        @duedull
-                    </span>
+                <div className="flex flex-col mt-4 w-fit p-4 rounded-2xl bg-amber-300 shadow-[6px_6px_0px_#3d3d3d]">
+
+                    {/* username */}
+                    <div>
+                        <span className="font-pixel8-bold text-xl">
+                            @duedull
+                        </span>
+                    </div>
+
+                    {/* bio */}
+                    <div className="font-pixel-mono-bold text-lg flex gap-1 items bg-center justify-start">
+                        <PiSmileyXEyesFill size={30} color="" />
+                        <span>
+                            Living in fantacy suffering in reality
+                        </span>
+                    </div>
+
+                    {/* location */}
+                    <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
+                        <FaLocationDot size={30} />
+                        <span>Faridabad, Haryana - 121003</span>
+                    </div>
+
+                    {/* birthday */}
+                    <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
+                        <GiCupcake size={30} />
+                        <span>11 July 2004</span>
+                    </div>
                 </div>
 
-                {/* bio */}
-                <div className="font-pixel-mono-bold text-lg flex gap-1 items bg-center justify-start mt-2">
-                    <PiSmileyXEyesFill size={30} color="" />
-                    <span>
-                        Living in fantacy suffering in reality
-                    </span>
-                </div>
-
-                {/* location */}
-                <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
-                    <FaLocationDot size={30} />
-                    <span>Faridabad, Haryana - 121003</span>
-                </div>
-
-                {/* birthday */}
-                <div className="font-pixel-mono-bold flex gap-1 items bg-center justify-start">
-                    <GiCupcake size={30} />
-                    <span>11 July 2004</span>
-                </div>
             </div>
 
             {/* section 2 message */}

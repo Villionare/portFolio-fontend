@@ -19,7 +19,7 @@ const Section: React.FC = () => {
             </div>
 
             {/* //lower profile detailes */}
-            <div className="bg-amber-200 pl-6 border border-b-blue-800 rounded-2xl">
+            <div className="bg-amber-200 pl-6 mt-10 border border-b-blue-800 rounded-2xl">
 
                 <Socials />
 

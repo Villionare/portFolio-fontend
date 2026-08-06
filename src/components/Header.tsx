@@ -6,6 +6,7 @@ import {
     FaGraduationCap,
     FaGithub,
     FaEnvelope,
+    FaPaperPlane,
 } from "react-icons/fa6";
 
 import { useNavigate } from "react-router-dom";
@@ -31,13 +32,13 @@ const Header = () => {
                 <span>HOME</span>
             </button>
 
-            {/* About */}
+            {/* Posts */}
             <button
-                onClick={() => navigate("/about")}
+                onClick={() => navigate("/")}
                 className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
             >
-                <FaUser />
-                <span>ABOUT</span>
+                <FaPaperPlane />
+                <span>POSTS</span>
             </button>
 
             {/* Skills */}
@@ -83,6 +84,15 @@ const Header = () => {
             >
                 <FaEnvelope />
                 <span>CONTACT</span>
+            </button>
+
+            {/* About */}
+            <button
+                onClick={() => navigate("/about")}
+                className="flex items-center gap-2 px-4 py-2 border-2 border-[#86121e] shadow-[inset_0_-4px_0_0_#b71c2c] rounded-md hover:bg-red-600 cursor-pointer"
+            >
+                <FaUser />
+                <span>ABOUT</span>
             </button>
 
             <button
