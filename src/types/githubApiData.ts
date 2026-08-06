@@ -10,3 +10,14 @@ export interface GithubProfileData {
   events: Awaited<ReturnType<typeof octokit.request<"GET /users/{username}/events/public">>>["data"];
   commits: Awaited<ReturnType<typeof octokit.request<"GET /repos/{owner}/{repo}/commits">>>["data"];
 }
+
+export interface ContributionDay {
+  date: string;
+  count: number;
+  level: number;
+}
+
+export interface GithubContributions {
+  total: Record<string, number>;
+  contributions: ContributionDay[];
+}

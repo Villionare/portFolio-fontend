@@ -1,15 +1,14 @@
 import ProfileImage from "../components/ProfileImage";
 import useGitHubUserTanstack from "../hooks/useGithubUserTanstack";
 import coverImage from "../assets/backgrounds/github_bg.png";
-import { FaCode, FaFolder, FaGithub, FaUser } from "react-icons/fa";
+import { FaCode, FaFolder, FaGithub, FaStar, FaUser } from "react-icons/fa";
 import RepoCard from "../components/RepoCard";
+import { formatDistanceToNow } from "date-fns";
+import ContributionGrid from "../components/GithubContributionGrid";
 
 const Github: React.FC = () => {
 
     const { data, isLoading, error } = useGitHubUserTanstack("villionare", "portFolio-fontend");
-
-    console.log(data);
-
 
     if (isLoading) {
         return (
@@ -192,6 +191,14 @@ const Github: React.FC = () => {
                             <div className="">JAVASCRIPT</div>
                         </div>
                     </fieldset>
+
+                    {/* GITHUB STREAK */}
+                    <fieldset className="flex-1/5 font-pixel-mono-bold p-1 border-x border-white">
+                        <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl ">
+                            <FaStar color='white' />
+                            <span>STREAK</span>
+                        </legend>
+                    </fieldset>
                 </div>
 
                 <fieldset className="font-pixel-mono-bold flex-1 p-2 border border-purple-800">
@@ -223,10 +230,59 @@ const Github: React.FC = () => {
 
             {/* lower dark portion */}
             <div className="p-1 bg-white rounded-2xl outline-3 outline-black">
-                <div className="bg-[#060b14] flex h-40 rounded-2xl">
-                    <div className="">Activity</div>
-                    <div className="">Graph</div>
-                    <div className="">Streak</div>
+                <div className="bg-[#060b14] flex flex-col md:flex-row rounded-2xl pt-1">
+
+                    {/* recent activily */}
+                    <fieldset className="flex-2/5 font-pixel-mono-bold p-1 border-x border-white">
+
+                        <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl \">
+                            <FaStar color='white' />
+                            <span>RECENT ACTIVITY</span>
+                        </legend>
+
+                        {/* output the recent activity of any project i am currently working on */}
+                        <div className="flex flex-col h-40 no-scrollbar overflow-x-hidden overflow-y-auto shrink-0">
+                            {data.events.map((event, i) => (
+
+                                <div className="flex text-white w-full">
+
+                                    {(() => {
+                                        const repo = event.repo.name.split("/")[1];
+
+                                        const time = event.created_at
+                                            ? formatDistanceToNow(new Date(event.created_at), {
+                                                addSuffix: true,
+                                            })
+                                            : "Unknown date";
+
+                                        return <div key={event.id} className="flex justify-between  w-full">
+                                            <span>
+                                                <span className="text-[#2fff0d]">{i + " "}</span>
+                                                {event.type}
+                                                <span className="text-yellow-400">
+                                                    {" " + repo + " "}
+                                                </span>
+                                                <span className="text-orange-500">
+                                                    - id: {event.id}
+                                                </span>
+                                            </span>
+                                            <span>{time}</span>
+                                        </div>
+                                    })()}
+                                </div>
+                            ))}
+                        </div>
+                    </fieldset>
+
+                    {/* graph */}
+                    <fieldset className="flex-2/5 font-pixel-mono-bold p-1 border-x border-white">
+                        <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl ">
+                            <FaStar color='white' />
+                            <span>CONTRIBUTION GRAPH</span>
+                        </legend>
+
+                        <ContributionGrid />
+                    </fieldset>
                 </div>
             </div>
         </div>
