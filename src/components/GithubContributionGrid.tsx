@@ -19,9 +19,7 @@ const ContributionGrid: React.FC = () => {
         ) ?? [];
 
     return (
-        <div className="grid grid-flow-col grid-rows-7 gap-[2px]">
-            <span>
-            </span>
+        <div className="grid grid-flow-col grid-rows-7 gap-1 w-fit">
             {contributions2026?.map((day) => (
                 <div
                     key={day.date}

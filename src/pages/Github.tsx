@@ -1,10 +1,12 @@
 import ProfileImage from "../components/ProfileImage";
 import useGitHubUserTanstack from "../hooks/useGithubUserTanstack";
 import coverImage from "../assets/backgrounds/github_bg.png";
-import { FaCode, FaFolder, FaGithub, FaStar, FaUser } from "react-icons/fa";
+import { FaBook, FaCode, FaCodeBranch, FaFolder, FaGithub, FaJava, FaJs, FaQuoteLeft, FaStar, FaUser, FaUserFriends, FaUsers } from "react-icons/fa";
 import RepoCard from "../components/RepoCard";
 import { formatDistanceToNow } from "date-fns";
 import ContributionGrid from "../components/GithubContributionGrid";
+import { FaCodePullRequest, FaGolang } from "react-icons/fa6";
+import { SiKotlin } from "react-icons/si";
 
 const Github: React.FC = () => {
 
@@ -88,120 +90,166 @@ const Github: React.FC = () => {
                 </div>
 
                 {/* container for information - repo, followers,following, etc */}
-                <div className="flex items-center justify-between w-full">
-
-                    {/* repositores */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-x border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>Repostories</span></div>
-                        <div className=""><span>{data.user.public_repos}</span></div>
+                <div className="font-pixel-mono-hb flex items-center justify-around gap-2 w-full">
+                    {/* Repositories */}
+                    <div className="group w-28 rounded-lg border-2 border-orange-500 bg-[#FFF4DE] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaBook className="mx-auto text-3xl text-orange-600 transition-transform group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            Repos
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            {data.user.public_repos}
+                        </p>
                     </div>
 
-                    {/* followers */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-r border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>Followers</span></div>
-                        <div className=""><span>{data.user.followers}</span></div>
+                    {/* Followers */}
+                    <div className="group w-28 rounded-lg border-2 border-sky-500 bg-[#EEF7FF] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaUsers className="mx-auto text-3xl text-sky-600 transition-transform group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            Followers
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            {data.user.followers}
+                        </p>
                     </div>
 
-                    {/* following */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-r border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>Following</span></div>
-                        <div className=""><span>{data.user.following}</span></div>
+                    {/* Following */}
+                    <div className="group w-28 rounded-lg border-2 border-emerald-500 bg-[#F0FFF5] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaUserFriends className="mx-auto text-3xl text-emerald-600 transition-transform group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            Following
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            {data.user.following}
+                        </p>
                     </div>
 
-                    {/* stars Earned */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-r border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>Stars Earned</span></div>
-                        <div className=""><span>0</span></div>
+                    {/* Stars */}
+                    <div className="group w-28 rounded-lg border-2 border-yellow-500 bg-[#FFFCEB] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaStar className="mx-auto text-3xl text-yellow-500 transition-transform group-hover:rotate-12 group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            Stars
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            0
+                        </p>
                     </div>
 
-                    {/* commits */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-r border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>Commits</span></div>
-                        <div className=""><span>312</span></div>
+                    {/* Commits */}
+                    <div className="group w-28 rounded-lg border-2 border-pink-500 bg-[#FFF2F7] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaCodeBranch className="mx-auto text-3xl text-violet-600 transition-transform group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            Commits
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            312
+                        </p>
                     </div>
 
-                    {/* pull requests */}
-                    <div className="flex-1 flex flex-col items-center justify-center  border-r border-orange-500">
-
-                        <div className="">
-                            <FaFolder size={30} />
-                        </div>
-
-                        <div className=""><span>pull requests</span></div>
-                        <div className=""><span>18</span></div>
+                    {/* Pull Requests */}
+                    <div className="group w-28 rounded-lg border-2 border-pink-500 bg-[#FFF2F7] p-3 shadow-[2px_2px_0_#9A9A9A] transition-all hover:-translate-y-1 hover:shadow-[6px_6px_0px_#3d3d3d]">
+                        <FaCodePullRequest className="mx-auto text-3xl text-pink-600 transition-transform group-hover:scale-110" />
+                        <p className="font-pixel-hb mt-2 text-center uppercase tracking-wider text-zinc-700">
+                            PRs
+                        </p>
+                        <p className="text-center text-3xl font-black text-zinc-900">
+                            18
+                        </p>
                     </div>
                 </div>
-
             </div>
 
             {/* middle section */}
             <div className="bg-amber-200 flex border border-amber-900 rounded-2xl px-4 py-2">
 
                 {/* first section*/}
-                <div className="flex flex-col gap-3 w-fit p-2 border border-red-500">
+                <div className="flex flex-col gap-3 w-fit p-2">
 
-                    {/* about me  */}
-                    <fieldset className="font-pixel-mono-bold bg-[#fbefda] rounded-2xl p-2 border-2 border-black max-w-[20vw]">
-                        <legend className="flex items-center justify-center gap-2 bg-[#080e1a] p-2 text-white rounded-2xl border-4 border-white">
-                            <FaUser color='white' />
+                    {/* About Me */}
+                    <fieldset className="font-pixel-mono-bold max-w-[20vw] rounded-2xl border-2 border-black bg-[#fbefda] p-3 shadow-[3px_3px_0_#707070]">
+                        <legend className="flex items-center justify-center gap-2 rounded-2xl border-4 border-white bg-[#080e1a] px-4 py-2 text-white">
+                            <FaUser />
                             <span>ABOUT ME</span>
                         </legend>
 
-                        <span>{data.user.bio}</span>
-                    </fieldset>
+                        <div className="mt-1 rounded-xl border-2 border-zinc-800 bg-[#fff8ec] p-2">
 
-                    {/* top languages */}
-                    <fieldset className="font-pixel-mono-bold bg-[#fbefda] rounded-2xl p-2 border-2 border-black max-w-[20vw]">
-                        <legend className="flex items-center justify-center gap-2 bg-[#080e1a] p-2 text-white rounded-2xl border-4 border-white">
-                            <FaCode color='white' />
-                            <span>TOP LANGUAGES</span>
-                        </legend>
+                            <div className="mb-3 flex items-center gap-2 border-b border-zinc-300 pb-2">
+                                <FaQuoteLeft className="text-orange-500" />
+                                <span className="text-xs uppercase tracking-widest text-zinc-600">
+                                    Bio
+                                </span>
+                            </div>
 
-                        <div className="flex flex-col">
-                            <div className="">JAVASCRIPT</div>
-                            <div className="">JAVASCRIPT</div>
-                            <div className="">JAVASCRIPT</div>
-                            <div className="">JAVASCRIPT</div>
-                            <div className="">JAVASCRIPT</div>
-                            <div className="">JAVASCRIPT</div>
+                            <p className="min-h-fit text-sm leading-5 text-zinc-800">
+                                {data.user.bio || (
+                                    <>
+                                        Full-Stack Developer focused on building
+                                        clean, scalable web applications with
+                                        React, TypeScript, Java and Spring Boot.
+                                        Always learning new technologies.
+                                    </>
+                                )}
+                            </p>
+
                         </div>
                     </fieldset>
 
-                    {/* GITHUB STREAK */}
-                    <fieldset className="flex-1/5 font-pixel-mono-bold p-1 border-x border-white">
-                        <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl ">
-                            <FaStar color='white' />
-                            <span>STREAK</span>
+                    {/* Top Languages */}
+                    <fieldset className="font-pixel-mono-bold max-w-[20vw] rounded-2xl border-2 border-black bg-[#fbefda] p-2">
+                        <legend className="flex items-center justify-center gap-2 rounded-2xl border-4 border-white bg-[#080e1a] px-4 py-2 text-white">
+                            <FaCode />
+                            <span>TOP LANGUAGES</span>
                         </legend>
+
+                        <div className="mt-2 space-y-2 text-sm">
+
+                            <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-[#fff8ec] px-3 py-2">
+                                <div className="flex items-center gap-2">
+                                    <FaJs className="text-yellow-400" />
+                                    <span>JavaScript</span>
+                                </div>
+                                <div className="h-3 w-3 rounded-full bg-[#f1e05a]" />
+                            </div>
+
+                            <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-[#fff8ec] px-3 py-2">
+                                <div className="flex items-center gap-2">
+                                    <FaJava className="text-red-600" />
+                                    <span>Java</span>
+                                </div>
+                                <div className="h-3 w-3 rounded-full bg-[#b07219]" />
+                            </div>
+
+                            <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-[#fff8ec] px-3 py-2">
+                                <div className="flex items-center gap-2">
+                                    <FaCode className="text-blue-600" />
+                                    <span>C</span>
+                                </div>
+                                <div className="h-3 w-3 rounded-full bg-[#555555]" />
+                            </div>
+
+                            <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-[#fff8ec] px-3 py-2">
+                                <div className="flex items-center gap-2">
+                                    <FaGolang className="text-cyan-500" />
+                                    <span>Go</span>
+                                </div>
+                                <div className="h-3 w-3 rounded-full bg-[#00ADD8]" />
+                            </div>
+
+                            <div className="flex items-center justify-between rounded-lg border border-zinc-300 bg-[#fff8ec] px-3 py-2">
+                                <div className="flex items-center gap-2">
+                                    <SiKotlin className="text-purple-600" />
+                                    <span>Kotlin</span>
+                                </div>
+                                <div className="h-3 w-3 rounded-full bg-[#A97BFF]" />
+                            </div>
+
+                        </div>
                     </fieldset>
                 </div>
 
-                <fieldset className="font-pixel-mono-bold flex-1 p-2 border border-purple-800">
+                {/* RIGHT SIDE */}
+                <fieldset className="font-pixel-mono-bold flex-1 p-2">
                     <legend className="flex items-center justify-center gap-2 bg-[#080e1a] p-2 text-white rounded-2xl border-4 border-white">
                         <FaFolder color='white' />
                         <span>POPULAR REPOSITORIES</span>
@@ -213,12 +261,12 @@ const Github: React.FC = () => {
                         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
                             {data.repos.slice(0, 9).map((repo) => (
                                 <RepoCard
-                                    key={repo.id}
                                     name={repo.name}
-                                    description={repo.description ?? "No description provided."}
+                                    description={repo.description ?? "No description"}
                                     language={repo.language ?? "Unknown"}
                                     stars={repo.stargazers_count}
                                     forks={repo.forks_count}
+                                    url={repo.html_url}
                                 />
                             ))}
                         </div>
@@ -230,10 +278,10 @@ const Github: React.FC = () => {
 
             {/* lower dark portion */}
             <div className="p-1 bg-white rounded-2xl outline-3 outline-black">
-                <div className="bg-[#060b14] flex flex-col md:flex-row rounded-2xl pt-1">
+                <div className="bg-[#060b14] flex flex-col gap-4 rounded-2xl p-2">
 
                     {/* recent activily */}
-                    <fieldset className="flex-2/5 font-pixel-mono-bold p-1 border-x border-white">
+                    <fieldset className="flex-1 font-pixel-mono-bold p-1 border-b border-white">
 
                         <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl \">
                             <FaStar color='white' />
@@ -241,13 +289,18 @@ const Github: React.FC = () => {
                         </legend>
 
                         {/* output the recent activity of any project i am currently working on */}
-                        <div className="flex flex-col h-40 no-scrollbar overflow-x-hidden overflow-y-auto shrink-0">
+                        <div className="flex flex-col  h-40 no-scrollbar overflow-x-hidden overflow-y-auto shrink-0">
                             {data.events.map((event, i) => (
 
-                                <div className="flex text-white w-full">
+                                <div className="flex text-white w-full" key={event.id}>
 
                                     {(() => {
                                         const repo = event.repo.name.split("/")[1];
+
+                                        const commit = data.commits.find(
+                                            (commit) =>
+                                                commit.sha === (event.payload as { head?: string }).head
+                                        );
 
                                         const time = event.created_at
                                             ? formatDistanceToNow(new Date(event.created_at), {
@@ -263,7 +316,7 @@ const Github: React.FC = () => {
                                                     {" " + repo + " "}
                                                 </span>
                                                 <span className="text-orange-500">
-                                                    - id: {event.id}
+                                                    - {commit?.commit.message}
                                                 </span>
                                             </span>
                                             <span>{time}</span>
@@ -275,13 +328,28 @@ const Github: React.FC = () => {
                     </fieldset>
 
                     {/* graph */}
-                    <fieldset className="flex-2/5 font-pixel-mono-bold p-1 border-x border-white">
+                    <fieldset className="flex-1 flex font-pixel-mono-bold p-2">
                         <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl ">
                             <FaStar color='white' />
                             <span>CONTRIBUTION GRAPH</span>
                         </legend>
 
-                        <ContributionGrid />
+                        <fieldset className="border border-white w-fit p-2">
+                            <legend className="text-white">
+                                For the year of 2026
+                            </legend>
+
+                            <ContributionGrid />
+                        </fieldset>
+
+                        {/* GITHUB STREAK */}
+                        {/* <fieldset className="flex-1/5 font-pixel-mono-bold p-1 border-x border-white">
+                            <legend className="flex items-center justify-center gap-2 bg-green-700 p-1 text-white rounded-2xl ">
+                                <FaStar color='white' />
+                                <span>STREAK</span>
+                            </legend>
+
+                        </fieldset> */}
                     </fieldset>
                 </div>
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { FiArrowUpRight } from 'react-icons/fi';
 
 interface RepoCardProps {
     name: string;
@@ -6,11 +7,12 @@ interface RepoCardProps {
     language: string;
     stars: number | undefined;
     forks: number | undefined;
+    url: string
 }
 
-const RepoCard: React.FC<RepoCardProps> = ({ name = "diddy repo", description = "temprory repo placeholder", language = "english", stars = 4, forks = 0, }) => {
+const RepoCard: React.FC<RepoCardProps> = ({ name = "diddy repo", description = "temprory repo placeholder", language = "english", stars = 4, forks = 0, url = "#" }) => {
     return (
-        <div className="min-w-40 rounded-xl border-2 border-zinc-400 bg-[#F9EFD7] shadow-[3px_3px_0px_#7c7c7c] transition-all duration-200 hover:-translate-y-1 hover:shadow-[5px_5px_0px_#7c7c7c]">
+        <div className="min-w-40 flex flex-col justify-center rounded-xl border-2 border-zinc-400 bg-[#F9EFD7] shadow-[3px_3px_0px_#7c7c7c] transition-all duration-200 hover:-translate-y-1 hover:shadow-[5px_5px_0px_#7c7c7c]">
 
             {/* Header */}
             <div className="flex items-start justify-between p-4 pb-2">
@@ -24,9 +26,15 @@ const RepoCard: React.FC<RepoCardProps> = ({ name = "diddy repo", description = 
                     </p>
                 </div>
 
-                <button className="rounded-md border border-zinc-500 bg-[#FFE8B2] p-2 hover:bg-[#FFD97A]">
-                    📋
-                </button>
+                <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="rounded-md border border-zinc-500 bg-[#FFE8B2] p-2 transition-colors hover:bg-[#FFD97A]"
+                    aria-label={`Open ${name} repository`}
+                >
+                    <FiArrowUpRight size={18} />
+                </a>
             </div>
 
             {/* Footer */}
